@@ -1,17 +1,18 @@
 "use client";
 
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
+import { DEFAULT_LOGIN_PATH } from "@/routes";
 
 export const Social = () => {
 
   const onClick = (provider: "google" | "github") => {
-    // signIn(provider, {
-    //   callbackUrl: DEFAULT_LOGIN_PATH,
-    // });
+    signIn(provider, {
+      callbackUrl: DEFAULT_LOGIN_PATH,
+    });
   }
 
   return (

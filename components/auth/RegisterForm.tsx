@@ -45,10 +45,10 @@ const RegisterForm = () => {
     setSuccess("")
     console.log(values)
     startTransition(() => {
-       Register(values).then(() => {
-      //   setError(data.error)
-      //   setSuccess(data.success)
-       })
+      Register(values).then((data) => {
+        setError(data.error)
+         setSuccess(data.success)
+      })
     }
 
     )

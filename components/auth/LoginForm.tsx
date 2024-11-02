@@ -48,12 +48,11 @@ const LoginForm = () => {
     console.log(values)
     startTransition(() => {
       login(values).then((data) => {
-      setError(data?.error)
-      // setSuccess(data?.success)
+        setError(data?.error)
+        setSuccess(data?.success)  
+        console.log(error)
       })
-    }
-
-    )
+    })
   }
 
 
@@ -107,7 +106,6 @@ const LoginForm = () => {
               <FormSuccess message={success} />
               <Button type="submit" className='w-full'>Login</Button>
             </div>
-
           </form>
         </Form>
 

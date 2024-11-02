@@ -13,6 +13,7 @@ const BackButton = ({ label, href }: BackButonProps) => {
       <Button variant="link"
         size="sm"
         asChild
+        className='text-center'
       >
         <Link href={href}>
           {label}
